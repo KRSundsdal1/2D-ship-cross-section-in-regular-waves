@@ -31,10 +31,8 @@ The raw data from each test is stored under separate `.csv`-files, all folowing 
 │   ├── 5PPH/               # Scenario C: Free-floating in sway and roll
 │   └── 6PPH/               # Scenario C: Free-floating in heave and roll
 ├── docs/                   
-│   ├── experimental_setup/
+│   ├── experimental_setup.md
 │   └── images/
-├── scripts/
-│   └── examples/  # Python snippets for parsing and plotting
 ├── README.md
 └── LICENSE
 ```
