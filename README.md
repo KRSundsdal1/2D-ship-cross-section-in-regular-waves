@@ -20,6 +20,8 @@ These experiments provide a high-quality benchmark dataset for validation of hyd
 - Designing and planning related model experiments
 
 # Repository structure
+
+The raw data from each test is stored under separate `.csv`-files, all folowing the same naming convention: `XPPH_Rep`. `X` indicates what series the test is a part of, `PP` indicates the applied wave period, `H` indicates the applied wave height, and `_Rep` numbers eventual repetitions. As an example, `3092_2.csv` is the second repetition of test series 3, performed with wave period number 9 wave height number 2.
 ```
 ├── data/
 │   ├── 1PPH/               # Calibrated waves, without the model
@@ -30,7 +32,7 @@ These experiments provide a high-quality benchmark dataset for validation of hyd
 │   └── 6PPH/               # Scenario C: Free-floating in heave and roll
 ├── docs/                   
 │   ├── experimental_setup/
-│   └── tables/
+│   └── images/
 ├── scripts/
 │   └── examples/  # Python snippets for parsing and plotting
 ├── README.md
