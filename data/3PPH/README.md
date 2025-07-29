@@ -1,15 +1,15 @@
-# 2PPH - Scenario A: Fixed model
+# 3PPH - Scenario B: Freely floating model
 
-These files are the unfiltered measurements from the fixed model tests. The sensors and their configuration are documented in the [experimental setup](../../docs/experimental_setup.md).
+These files are the unfiltered measurements from the freely floating model tests. The sensors and their configuration are documented in the [experimental setup](../../docs/experimental_setup.md).
 
-The files are named with the following naming convention`2PPH_Rep.csv` 
+The files are named with the following naming convention`3PPH_Rep.csv` 
 
 `PP` denotes the applied incident wave period/frequency, from the list below. `H` denotes wether $H_1 = 0.024$ m or $H_2 = 0.04$ m was applied.
 
-As an example, `2111.csv` are the calibrated waves for
-- `PP = 11` $\rightarrow T = 0.802 $
-- `H=2` $\rightarrow H = 0.024$ m
-- `_Rep=None` $\rightarrow$ This is the first repetition.
+As an example, `3071_2.csv` are the calibrated waves for
+- `PP = 07` $\rightarrow T = 1.113 $
+- `H=1` $\rightarrow H = 0.024$ m
+- `_Rep=2` $\rightarrow$ This is the second repetition.
 
 | Index | $\xi_B$ [-] | $\omega$ [rad/s] | $T$ [s]   | $k$ [rad/m] | $\lambda$ [m]  | $c_g$ [m/s] | $h/\lambda$ [-] | Refl. Time [s] | $\lambda / L_{Beach}$ [-] |
 |------:|--------:|-----------:|--------:|-----------:|--------:|-----------:|----------:|----------------:|----------------:|
@@ -28,15 +28,19 @@ As an example, `2111.csv` are the calibrated waves for
 | 13    | 1.750   | 9.265      | 0.678   | 8.750     | 0.718   | 0.529     | 1.393    | 22.666          | 0.399          |
 | 14    | 2.000   | 9.905      | 0.634   | 10.000    | 0.628   | 0.495     | 1.592    | 24.231          | 0.349          |
 
-We have the data from 12 sensors in these tests
+We have the data from 15 sensors in these tests
 - `WM_Position [m]`: he horizontal stroke of the wave maker measured 1.5 m above the hinge.
-- `WP_* [m]`: The surface elevation measured at wave probes 1, 2, 3, 4, and 6.
-- `F* [N]`: The forces in x, y, and z axis as measured by the 6DOF force transducer.
-- `M* [Nm]`: The moments about the x, y, and z axis as measured by the 6DOF force transducer.
+- `WP_* [m]`: The surface elevation measured at wave probes `1`, `2`, `3`, `4`, and `6`
+- `Sway/Heave/Roll [m]/[rad]`: The rigid body motions in the inertial reference frame measured by the visual markers.
+- `Tension_* [N]`: The tension in the `_SB` (starboard) and `_PS` (port side) springs, as measured by the ring-type strain gauges.
+- `Force_Sway [N]`: The shear forces is through the vertical rail in sway direction, as measured by the bending beam strain gauge.
+- `ACC_* [m/s2]`: The body-fixed accelerations measured at `_HEAVE_SB` (vertical, starboard), `_HEAVE_PS` (vertical, port side), and `_SWAY` (horizontal, bottom) 
 
 
 ![Wave flume](../../docs/figures/The%20wave%20flume%20and%20wave%20probe%20positions.png)
 
-The model was placed with it's neutral axis in the location of wave probe 5, $7$ m from the wave-maker.
+The model in it's neutral position was position in the location of wave probe 5, $7$ m from the wave-maker.
 
-![The fixed model](../../docs/figures/Scenario%20A%20-%20The%20fixed%20model.png)
+![The freely floating model](../../docs/figures/Scenario%20B%20-%20The%20freely%20floating%20model.png)
+
+> **Known error**: We had some issues with the innacurate time recordings from the camera tracking the visual markers. As a result, the rigid body motions in the inertial reference frame (sway, heave, roll) in these file can be slightly out of phase with the body motions measured by the accelerometers.
