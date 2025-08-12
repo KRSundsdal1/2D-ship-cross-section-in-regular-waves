@@ -6,7 +6,7 @@ The files are named with the following naming convention`5PPH_Rep.csv`
 
 `PP` denotes the applied incident wave period/frequency, from the list below. `H` denotes wether $H_1 = 0.024$ m or $H_2 = 0.04$ m was applied.
 
-As an example, `5071_2.csv` are the calibrated waves for
+As an example, `5071_2.csv` are the time series for
 - `PP = 07` $\rightarrow T = 1.113 $
 - `H=1` $\rightarrow H = 0.024$ m
 - `_Rep=2` $\rightarrow$ This is the second repetition.
